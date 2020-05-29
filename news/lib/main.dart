@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/viste/homepage.dart';
+import 'package:news/app_bimby/main.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget {
 
         primaryColor: Colors.white,
       ),
-      home: Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => BimbyHome(),
+        //'/': (context) => Home()
+      },
     );
   }
 }
